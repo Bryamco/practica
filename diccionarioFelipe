@@ -1,0 +1,26 @@
+import datetime
+personas = {}
+
+def agregar_persona(diccionario:dict)-> dict:
+    nombre = input('whats the name of the person: ')
+    libro = input('What book did she/he take: ')
+    fecha = datetime.datetime.now()
+    fecha_prestamo = input('When did she/he take the book: ')
+    
+    diccionario_interno = {
+        'libro':libro,
+        'fecha':fecha_prestamo
+        
+    }
+    print(diccionario_interno)
+    
+    if diccionario.get(nombre) != None:
+        diccionario[nombre].append(diccionario_interno)
+        
+    else:
+        diccionario[nombre] = [diccionario_interno] 
+    print(diccionario)
+    
+    
+    
+agregar_persona(personas)     
